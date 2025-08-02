@@ -1,0 +1,60 @@
+---
+import FeatureShowcase from './FeatureShowcase.astro';
+---
+<header>
+  <nav>
+    <a href="/" class="logo">DrishtiAI</a>
+    <div class="nav-links">
+      <a href="#" id="learn-more-btn">Learn More</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+    </div>
+  </nav>
+</header>
+
+<FeatureShowcase />
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const learnMoreBtn = document.getElementById('learn-more-btn');
+    const featureShowcase = document.getElementById('feature-showcase');
+
+    if (learnMoreBtn && featureShowcase) {
+      learnMoreBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        featureShowcase.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+<style>
+  header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--dark-navy);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+</style>

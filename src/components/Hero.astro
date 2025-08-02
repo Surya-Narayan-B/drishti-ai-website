@@ -1,0 +1,43 @@
+<section class="hero">
+  <div class="hero-text">
+    <h1 transition:animate="fade" class="headline">Long hours, tired eyes? We've got you covered.</h1>
+    <p transition:animate="fade" class="subtext">
+      Our intelligent system gently protects your vision with smart reminders, helping you end every day with fresher eyes.
+    </p>
+  </div>
+  <div class="hero-image" transition:animate="fade">
+    <img src="/computer_img.png" alt="Illustration of a computer monitor with an eye icon" />
+  </div>
+</section>
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 2rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hero-text {
+    flex: 1;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  .hero-image {
+    flex: 1;
+    text-align: center;
+  }
+  /* Style for the actual image */
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

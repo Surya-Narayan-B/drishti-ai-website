@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+<Layout title="The Wellness Guide - VisionAI">
+  <Header />
+  <main class="content">
+    <h1>Our Wellness Guide</h1>
+
+    <h2>Why Digital Eye Care Matters</h2>
+    <p>In today's digital-first world, professionals and students spend over 6–10 hours daily in front of screens. This prolonged screen exposure leads to Digital Eye Strain (DES), also known as Computer Vision Syndrome, which can cause eye dryness, headaches, blurred vision, and fatigue.</p>
+    <p>Our intelligent system is designed to monitor your eye activity, encourage healthy screen habits, and protect your vision with real-time reminders and analytics.</p>
+
+    <h2>The 20-20-20 Rule</h2>
+    <p>The 20-20-20 rule is one of the most effective strategies to reduce eye strain.</p>
+    <h3>How it works:</h3>
+    <ul>
+      <li>Every <strong>20 minutes</strong>,</li>
+      <li>Look at something <strong>20 feet</strong> away,</li>
+      <li>For at least <strong>20 seconds</strong>.</li>
+    </ul>
+    <p>This simple practice relaxes your eye muscles and helps prevent dryness and fatigue. Our system automatically reminds you to follow this rule, ensuring you never forget to take these micro-breaks.</p>
+
+    <h2>Understanding Digital Eye Strain</h2>
+    <p>Digital eye strain occurs when your eyes are forced to focus on a single point (your screen) for too long.</p>
+    <h3>Common symptoms include:</h3>
+    <ul>
+      <li>Dry or watery eyes.</li>
+      <li>Headaches and neck pain (from poor posture).</li>
+      <li>Blurred or double vision.</li>
+      <li>Increased eye sensitivity and fatigue.</li>
+    </ul>
+    <p>Our app detects patterns like low blink rates, extended staring, and signs of drowsiness, then proactively provides wellness alerts.</p>
+
+    <h2>Tips for Better Eye Health</h2>
+    <p>Here are some expert-approved tips for maintaining eye health while using digital devices:</p>
+    <ul>
+      <li><strong>Blink Often:</strong> Make a conscious effort to blink fully every few seconds. Our app reminds you when your blink rate drops.</li>
+      <li><strong>Maintain Screen Distance:</strong> Keep your monitor about 50–70 cm away from your eyes, with the top of the screen at or just below eye level.</li>
+      <li><strong>Optimize Lighting:</strong> Avoid glare by using proper ambient lighting and adjusting screen brightness.</li>
+      <li><strong>Use Night Mode or Blue Light Filters:</strong> Reduce blue light exposure, especially during evening work.</li>
+      <li><strong>Follow a Healthy Work Schedule:</strong> Take a 5-minute break every hour to stretch and rest your eyes.</li>
+    </ul>
+
+    <h2>Quick Eye Exercises</h2>
+    <p>To relax your eyes and improve focus, try these exercises:</p>
+    <ul>
+        <li><strong>Palming:</strong> Rub your hands together and place them gently over closed eyes for 30 seconds.</li>
+        <li><strong>Eye Rolling:</strong> Slowly roll your eyes clockwise and counter-clockwise.</li>
+        <li><strong>Focus Shifting:</strong> Look at a near object (20 cm away), then a distant object (20 feet away), repeat 5–10 times.</li>
+        <li><strong>Figure Eight Exercise:</strong> Imagine drawing a giant figure eight with your eyes to improve flexibility.</li>
+    </ul>
+
+    <h2>Backed by AI & Research</h2>
+    <p>Our system combines the proven 20-20-20 rule with AI-powered tracking:</p>
+    <ul>
+      <li>Tracks your blink rate, gaze direction, and idle time.</li>
+      <li>Identifies fatigue patterns and signs of drowsiness.</li>
+      <li>Provides personalized recommendations through our AI Wellness Assistant, helping you develop sustainable digital wellness habits.</li>
+    </ul>
+
+    <h2>Call to Action</h2>
+    <p>Ready to protect your eyes and work smarter, not harder?</p>
+    <a href="/" class="cta-button">Start Monitoring Your Eyes Now </a>
+
+  </main>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    line-height: 1.7;
+  }
+  h1, h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  h2 {
+    margin-top: 2.5rem;
+  }
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  strong {
+    font-weight: 700;
+    color: var(--dark-navy);
+  }
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+  }
+  .cta-button:hover {
+    transform: scale(1.05);
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import FeatureCard from './FeatureCard.astro';
+---
+
+<section class="features scroll-animate">
+  <div class="features-grid">
+    <FeatureCard 
+      title="Blink Detection" 
+      description="Tracks your blinks and alerts you when it’s time to rest." 
+    />
+    <FeatureCard 
+      title="Real-Time Alerts" 
+      description="Instant notifications to prevent digital fatigue." 
+    />
+    <FeatureCard 
+      title="Smart Screen Breaks" 
+      description="Reminds you to take healthy screen pauses." 
+    />
+    <FeatureCard 
+      title="AI Wellness Assistant" 
+      description="Personalized support for long-term eye health." 
+    />
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+    gap: 2rem;
+  }
+</style>

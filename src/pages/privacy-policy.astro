@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+<Layout title="Privacy Policy - VisionAI">
+  <Header />
+  <main class="content">
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: July 27, 2025</em></p>
+
+    <h2>Your Privacy, Our Priority</h2>
+    <p>At VisionAI, we understand how important your privacy is — especially when using an app that accesses your webcam. We want you to know that your trust is our top priority. This policy is written to be clear, friendly, and transparent — no legal jargon, just the facts.</p>
+
+    <h2>What We Collect (And Why)</h2>
+    <p>We collect only what’s absolutely necessary to help you take care of your eyes:</p>
+    <ul>
+      <li><strong>Real-Time Webcam Data (Live Only):</strong> Your webcam stream is used only in real-time to detect blinks, eye strain, and fatigue patterns. We do not record, save, or upload your video — ever.</li>
+      <li><strong>Blink Rate & Screen Time Logs:</strong> These metrics are stored locally to generate your analytics and personalized wellness reports.</li>
+      <li><strong>Preferences:</strong> Settings like reminder intervals or themes are saved on your device to improve your experience.</li>
+    </ul>
+    <p>We never collect personal identifiers unless you choose to share them (e.g., email for support).</p>
+
+    <h2>How Your Data Is Used</h2>
+    <p>Your data is used only for your benefit:</p>
+    <ul>
+      <li>To detect early signs of digital eye strain and remind you to take breaks.</li>
+      <li>To generate personal wellness insights (blink trends, screen time summaries).</li>
+      <li>To make our AI Wellness Assistant smarter and more helpful — all without compromising your privacy.</li>
+    </ul>
+
+    <h2>Your Data Stays With You</h2>
+    <ul>
+      <li><strong>Local Processing:</strong> All webcam analysis happens on your device. No video data leaves your computer.</li>
+      <li><strong>No Cloud Storage:</strong> We don’t upload or back up your video data to any servers.</li>
+      <li><strong>Zero Sharing:</strong> We do not sell, rent, or share your data with third parties. Your wellness information is for you alone.</li>
+    </ul>
+
+    <h2>Your Rights</h2>
+    <ul>
+      <li><strong>Delete Anytime:</strong> You can clear your blink logs and analytics anytime with a single click in the app settings.</li>
+      <li><strong>Full Control:</strong> You decide when to start or stop monitoring — your camera is never accessed without your consent.</li>
+      <li><strong>Transparency:</strong> We will always let you know if our data policies change. Your privacy will remain at the heart of our design.</li>
+    </ul>
+
+    <h2>Our Promise</h2>
+    <p>We built VisionAI to improve your health, not to intrude on your privacy. We will never record you, spy on you, or misuse your information. Think of us as your digital wellness partner — here to protect your eyes, and your trust.</p>
+    <p>If you have any questions about this policy, please don’t hesitate to <a href="/contact">contact us</a>.</p>
+    
+    <div class="footer-nav">
+      <a href="/" class="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"></path>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+
+  </main>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    line-height: 1.7;
+  }
+  h1, h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  h2 {
+    margin-top: 2.5rem;
+  }
+  ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  strong {
+    font-weight: 700;
+    color: var(--dark-navy);
+  }
+
+  /* ADDED THESE STYLES */
+  .footer-nav {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+  }
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+  }
+  .back-button:hover {
+    transform: scale(1.05);
+  }
+</style>

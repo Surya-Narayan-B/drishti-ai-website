@@ -1,0 +1,51 @@
+<section class="stats-container scroll-animate">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">80%</div>
+      <div class="stat-description">of people suffer from digital eye strain</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100+</div>
+      <div class="stat-description">hours of screen analyzed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">95%</div>
+      <div class="stat-description">Accuracy in Real-World Conditions</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats-container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .stats-grid {
+    display: flex;
+    justify-content: space-around;
+  }
+  .stat-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* This is the key: it stacks the number and description vertically */
+    align-items: center;    /* This centers them horizontally */
+    text-align: center;     /* This centers the text if it wraps to a new line */
+    padding: 0 1rem;
+    border-right: 1px solid var(--border-color);
+  }
+  .stat-item:last-child {
+    border-right: none;
+  }
+  .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+  }
+  .stat-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    max-width: 200px; /* Prevents the text from getting too wide */
+  }
+</style>
