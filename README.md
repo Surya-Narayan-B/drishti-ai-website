@@ -1,56 +1,68 @@
-HEAD
-# Astro Starter Kit: Basics
+# DrishtiAI - Your Personal Wellness Dashboard
 
-```sh
-npm create astro@latest -- --template basics
-```
+DrishtiAI is an intelligent, real-time wellness monitor designed to help you build healthier screen habits. Using your webcam, it tracks key indicators of visual and mental fatigue, providing smart alerts and a conversational AI assistant to guide you toward a more balanced workday.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**[Live Demo URL Will Go Here]**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## ✨ Key Features
 
-## 🚀 Project Structure
+* **Intelligent Fatigue Score:** Instead of simple alerts, DrishtiAI calculates a unified fatigue score based on a pattern of behaviors, including long blinks, head nods, and yawns, for more accurate drowsiness detection.
+* **Advanced Gaze & Head Pose Tracking:** A robust 2.5D head pose model accurately tracks your gaze direction and distinguishes between drowsy head nods and simple posture changes like leaning back.
+* **Real-Time Monitoring:** A live dashboard visualizes your blink rate (BPM), active time, and fatigue score, giving you immediate feedback on your screen habits.
+* **Conversational AI Assistant:** Powered by Google Gemini, the AI assistant remembers your conversation and can provide wellness tips, explain your stats, or answer general questions.
+* **Personalized Calibration:** A one-time calibration process tunes the detection parameters to your unique facial structure and environment, ensuring high accuracy.
+* **Smart Alerts & Reminders:** The application provides notifications for eye strain (staring), low blink rates, and scheduled breaks based on the 20-20-20 rule.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 💻 Technology Stack
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+* **Backend:** Python, Flask, OpenCV, MediaPipe
+* **AI:** Google Gemini
+* **Frontend:** Astro, JavaScript, Chart.js
+* **Database:** SQLite
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 🚀 Getting Started
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Prerequisites
 
-## 👀 Want to learn more?
+* Python 3.10+
+* A webcam
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-=======
-# drishti-ai-website
-The Astro-powered frontend for DrishtiAI, a Python-based computer vision application for monitoring user wellness.
+### Installation & Setup
+
+1.  **Clone the repositories:**
+    ```bash
+    # Clone the backend
+    git clone [https://github.com/](https://github.com/)<YOUR_USERNAME>/<YOUR_BACKEND_REPO>.git
+    # Clone the frontend
+    git clone [https://github.com/Surya-Narayan-B/drishti-ai-website.git](https://github.com/Surya-Narayan-B/drishti-ai-website.git)
+    ```
+2.  **Setup the Backend:**
+    ```bash
+    cd <YOUR_BACKEND_REPO>
+    pip install -r requirements.txt
+    python real_time_eye_tracking.py
+    ```
+3.  **Setup the Frontend:**
+    ```bash
+    cd ../drishti-ai-website
+    npm install
+    npm run dev
+    ```
+4.  Open your browser to `http://localhost:4321` to view the application.
+
+---
+
+## 🔮 Future Improvements
+
+* Create a standalone `.exe` file for easy distribution using PyInstaller.
+* Enhance session reports with more detailed visualizations.
+
+---
+
+Created by [Surya Narayan].
