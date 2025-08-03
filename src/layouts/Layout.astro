@@ -15,6 +15,61 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <style is:global>
+  /* --- Mobile Styles (for screens 768px or smaller) --- */
+  @media (max-width: 768px) {
+    /* 1. HERO SECTION: Stack text and image vertically */
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 1.5rem; /* Reduced padding */
+    }
+
+    /* 2. HEADER: Hide complex links for a cleaner look */
+    /* NOTE: You'll eventually want a hamburger menu here */
+    .nav-links {
+      display: none;
+    }
+    header, .final-cta, .features, .stats-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* 3. FONT SIZES: Make typography smaller for mobile */
+    h1, .hero .headline {
+      font-size: 2.25rem; /* was 3.5rem */
+    }
+    h2, .final-cta h2 {
+      font-size: 2rem; /* was 2.5rem */
+    }
+
+    /* 4. STATS SECTION: Stack stats vertically */
+    .stats-grid {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .stat-item {
+      border-right: none; /* Remove vertical dividers */
+    }
+
+    /* 5. FEATURES GRID: Change from 2 columns to 1 */
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* 6. FEATURE SHOWCASE (Dropdown): Change from 3 columns to 1 */
+    .showcase-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .feature-showcase {
+      padding: 1.5rem;
+      top: 70px; /* Adjust position relative to header */
+    }
+  }
+</style>
   </head>
   <body>
     <slot />

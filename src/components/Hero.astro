@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/computer_img.png'; // Assuming your image is in src/assets
+---
 <section class="hero">
   <div class="hero-text">
     <h1 transition:animate="fade" class="headline">Long hours, tired eyes? We've got you covered.</h1>
@@ -6,7 +10,7 @@
     </p>
   </div>
   <div class="hero-image" transition:animate="fade">
-    <img src="/computer_img.png" alt="Illustration of a computer monitor with an eye icon" />
+    <Image src={heroImage} widths={[400, 800]} sizes="(max-width: 768px) 100vw, 50vw" alt="Illustration of a computer monitor with an eye icon" />
   </div>
 </section>
 <style>
