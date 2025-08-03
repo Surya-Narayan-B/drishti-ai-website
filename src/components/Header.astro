@@ -23,11 +23,15 @@ import FeatureShowcase from './FeatureShowcase.astro';
 <FeatureShowcase />
 
 <script>
-  // Script for the Feature Showcase dropdown
+
   document.addEventListener('astro:page-load', () => {
+    // --- Element Selectors ---
     const learnMoreBtn = document.getElementById('learn-more-btn');
     const featureShowcase = document.getElementById('feature-showcase');
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
 
+    // --- Logic for Feature Showcase Dropdown ---
     if (learnMoreBtn && featureShowcase) {
       learnMoreBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -35,16 +39,28 @@ import FeatureShowcase from './FeatureShowcase.astro';
       });
     }
 
-    // New script for the hamburger menu
-    const hamburgerBtn = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-
+    // --- Logic for Hamburger Menu Toggle ---
     if (hamburgerBtn && navLinks) {
       hamburgerBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('is-open');
-        const isOpen = navLinks.classList.contains('is-open');
-        hamburgerBtn.setAttribute('aria-expanded', isOpen.toString());
+        toggleMenu();
       });
+
+      // NEW: Logic to close menu when any nav link is clicked
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          // Only close if the menu is actually open
+          if (navLinks.classList.contains('is-open')) {
+            toggleMenu();
+          }
+        });
+      });
+    }
+
+    // --- Reusable Function to Open/Close Menu ---
+    function toggleMenu() {
+      const isOpen = navLinks.classList.toggle('is-open');
+      hamburgerBtn.setAttribute('aria-expanded', isOpen.toString());
     }
   });
 </script>

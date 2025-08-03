@@ -18,8 +18,24 @@ const { title } = Astro.props;
 
 
     <style is:global>
-  /* --- Mobile Styles (for screens 768px or smaller) --- */
-  @media (max-width: 768px) {
+    /* --- Mobile Styles (for screens 768px or smaller) --- */
+    .mobile-only-break { display: none; }
+    
+    @media (max-width: 768px) {
+    /* NEW: Show the line break only on mobile */
+    .mobile-only-break {
+      display: block;
+    }
+
+    /* --- Hero Section Mobile Layout --- */
+    .hero-text {
+      order: 2; /* Place text below the image */
+    }
+    .hero-image {
+      order: 1; /* Place image above the text */
+      margin-top: 0;
+      margin-bottom: 2rem; /* Add space below the image */
+    }
     /* 1. HERO SECTION: Stack text and image vertically */
     .hero {
       flex-direction: column;
