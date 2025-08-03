@@ -45,14 +45,15 @@ const { title } = Astro.props;
       font-size: 2rem; /* was 2.5rem */
     }
 
-    /* 4. STATS SECTION: Stack stats vertically */
     .stats-grid {
-      flex-direction: column;
-      gap: 2.5rem;
+    flex-wrap: wrap;       /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items */
+    gap: 2rem;
     }
-    .stat-item {
-      border-right: none; /* Remove vertical dividers */
-    }
+  .stat-item {
+    flex: 1 1 150px;       /* Allow items to grow and shrink, with a base size */
+    border-right: none;    /* Ensure no borders on mobile */
+  }
     /* 6. FEATURE SHOWCASE (Dropdown): Change from 3 columns to 1 */
     .showcase-content {
       grid-template-columns: 1fr;
