@@ -1,22 +1,35 @@
 <footer class="final-cta scroll-animate">
   <h2>Upgrade Your Digital Wellbeing</h2>
   <p>Take control of your screen habits and improve your eye health.</p>
-  <a href="#" class="cta-button">Download for Free</a>
+
+  <div class="download-section">
+    <a href="https://github.com/Surya-Narayan-B/drishti-ai-backend/releases/download/v1.0.0/DrishtiAI.exe" class="cta-button">
+      Download for Windows
+    </a>
+
+    <!-- The <details> element, ready for your new styles -->
+    <details class="security-details">
+      <summary>🛡️ First-time install on Windows?</summary>
+      <div class="details-content">
+        <p>Windows shows a standard safety check for new apps. It's safe! Just click <strong>“More info” → “Run anyway”</strong> to start.</p>
+      </div>
+    </details>
+    
+  </div>
 </footer>
+
 <style>
   .final-cta {
     text-align: center;
     padding: 5rem 2rem;
     background-color: var(--light-blue-bg);
+    background-image: none; /* Removes the giant unwanted background shape */
   }
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-  }
+  .final-cta::before, .final-cta::after { display: none; } /* Extra safety */
+
+  h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  .final-cta p { font-size: 1.125rem; margin-bottom: 2rem; color: #556; line-height: 1.6; }
+
   .cta-button {
     display: inline-block;
     background-color: var(--primary-blue);
@@ -28,8 +41,46 @@
     font-size: 1.125rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .cta-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+  .cta-button:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25); }
+
+  /* --- YOUR SUGGESTED STYLES, APPLIED --- */
+  .security-details {
+    max-width: 550px;
+    margin: 1.5rem auto 0;
+    background: #f0f4ff;
+    padding: 0; /* Padding will be on summary/content */
+    border: 1px solid #c2d4ff;
+    border-radius: 6px;
+    text-align: left;
+  }
+
+  .security-details[open] {
+    background: #e8f0ff;
+  }
+
+  summary {
+    font-weight: bold;
+    font-size: 1.05em;
+    padding: 12px 15px;
+    cursor: pointer;
+    outline: none;
+    list-style: none; /* Removes default triangle */
+  }
+  summary::-webkit-details-marker { display: none; }
+
+  .details-content p {
+    font-size: 1em;
+    color: #333;
+    padding: 0 15px 15px;
+    margin: 0;
+    border-top: 1px solid #c2d4ff;
+    padding-top: 15px;
+  }
+  
+  /* Hides the download section on mobile */
+  @media (max-width: 768px) {
+    .download-section {
+      display: none;
+    }
   }
 </style>
